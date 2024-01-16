@@ -15,6 +15,9 @@ struct QuizView: View {
     
     // List of prior questions
     @State var history: [Question] = [] // Empty to start
+    
+    // Keeps track of the filtering option that the user has selected
+    @State var filteringOption: AnswerState = .NoInputGiven // Everything
     //MARK: Computed properties
     var body: some View {
         HStack {
@@ -23,7 +26,7 @@ struct QuizView: View {
                 HStack {
                     Spacer()
                     Text("\(currentWord.english)")
-                        .font(.custom( "Helvetica", size: 80.0))
+                        .font(.custom( "Helvetica", size: 75.0))
                 }
                 
                 
@@ -58,12 +61,25 @@ struct QuizView: View {
                 }
             }
             // List of past questions
-            List(
-                filtering(providedHistory: history, on: .correct)
-            ) { currentQuestion in
-                HStack {
-                    Text("\(currentQuestion.currentWord.english) = \(currentQuestion.answerGiven) (\(currentQuestion.currentWord.french)) \(currentQuestion.result.rawValue)")
+            VStack {
+                
+                // Picker to select filtering type
+                Picker("Filtering on...", selection: $filteringOption) {
+                    Text("nothing (show all questions)")
+                        .tag(AnswerState.NoInputGiven)
+                    Text("correct")
+                        .tag(AnswerState.correct)
+                    Text("incorrect")
+                        .tag(AnswerState.incorrect)
                 }
+                // The list of questions
+                List(
+                    filtering(providedHistory: history, on: filteringOption)
+                ) { currentQuestion in
+                    HStack {
+                        Text("\(currentQuestion.currentWord.english) = \(currentQuestion.answerGiven) (\(currentQuestion.currentWord.french)) \(currentQuestion.result.rawValue)")
+                    }
+            }
             }
         }
         .frame(width: 800, height: 400)
