@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct QuizView: View {
+    
+    @State var answerGiven = ""
+    
     var body: some View {
         HStack {
             //Quiz Interface
@@ -21,7 +24,9 @@ struct QuizView: View {
                 
                 Divider()
                 
-                
+                TextField("Answer", text: $answerGiven)
+                    .font(.custom( "Helvetica", size: 96.0))
+                    .multilineTextAlignment(.trailing)
             }
             // List of past questions
             Text ("History")
