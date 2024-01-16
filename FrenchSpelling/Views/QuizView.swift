@@ -32,7 +32,7 @@ struct QuizView: View {
                         .padding(20)
                     TextField("Answer", text: $answerGiven)
                         .multilineTextAlignment(.trailing)
-                    .padding(.leading)
+                        .padding(.leading)
                     
                 }
                 .font(.custom( "Helvetica", size: 96.0))
@@ -45,7 +45,14 @@ struct QuizView: View {
                         checkAnswer()
                     }, label: {
                         Text("Submit")
-                })
+                    })
+                    Button(action: {
+                        //Check answer
+                       newQuestion()
+                    }, label: {
+                        Text("New Question")
+                    })
+                    
                 }
             }
             // List of past questions
@@ -65,6 +72,14 @@ struct QuizView: View {
             result = .incorrect
         }
     }
+    
+    func newQuestion() {
+         currentWord = vocabularyList.randomElement()!
+         answerGiven = ""
+        result = .NoInputGiven
+    }
+        
+    
 }
 
 #Preview {
