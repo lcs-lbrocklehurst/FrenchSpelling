@@ -58,7 +58,9 @@ struct QuizView: View {
                 }
             }
             // List of past questions
-            List(history) {currentQuestion in
+            List(
+                filtering(providedHistory: history, on: .correct)
+            ) { currentQuestion in
                 HStack {
                     Text("\(currentQuestion.currentWord.english) = \(currentQuestion.answerGiven) (\(currentQuestion.currentWord.french)) \(currentQuestion.result.rawValue)")
                 }
