@@ -23,7 +23,7 @@ struct QuizView: View {
                 HStack {
                     Spacer()
                     Text("\(currentWord.english)")
-                        .font(.custom( "Helvetica", size: 96.0))
+                        .font(.custom( "Helvetica", size: 80.0))
                 }
                 
                 
@@ -32,7 +32,7 @@ struct QuizView: View {
                 HStack {
                     Text(result.rawValue)
                         .padding(20)
-                    TextField("Answer", text: $answerGiven)
+                    TextField(" ", text: $answerGiven)
                         .multilineTextAlignment(.trailing)
                         .padding(.leading)
                     
@@ -58,7 +58,11 @@ struct QuizView: View {
                 }
             }
             // List of past questions
-            Text ("History")
+            List(history) {currentQuestion in
+                HStack {
+                    Text("\(currentQuestion.currentWord.english) = \(currentQuestion.answerGiven) (\(currentQuestion.currentWord.french)) \(currentQuestion.result.rawValue)")
+                }
+            }
         }
         .frame(width: 800, height: 400)
     }
