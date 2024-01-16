@@ -13,6 +13,8 @@ struct QuizView: View {
     @State var answerGiven = ""
     @State var result: AnswerState = .NoInputGiven
     
+    // List of prior questions
+    @State var history: [Question] = [] // Empty to start
     //MARK: Computed properties
     var body: some View {
         HStack {
@@ -74,6 +76,18 @@ struct QuizView: View {
     }
     
     func newQuestion() {
+        
+        // Save the question just completed
+        let oldQuestion = Question(
+            currentWord: currentWord,
+            answerGiven: answerGiven,
+            result: result
+        )
+        
+            // Add it to the history
+        history.insert(oldQuestion, at: 0)
+        
+        // Resets everything
          currentWord = vocabularyList.randomElement()!
          answerGiven = ""
         result = .NoInputGiven
