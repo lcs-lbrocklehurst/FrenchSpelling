@@ -11,6 +11,7 @@
 		47B3FCBA2B56009A000FBC97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B3FCB92B56009A000FBC97 /* Assets.xcassets */; };
 		47B3FCBD2B56009A000FBC97 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B3FCBC2B56009A000FBC97 /* Preview Assets.xcassets */; };
 		47B3FCC72B56044A000FBC97 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B3FCC62B56044A000FBC97 /* QuizView.swift */; };
+		47B3FCC92B56142D000FBC97 /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B3FCC82B56142D000FBC97 /* WordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		47B3FCBC2B56009A000FBC97 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		47B3FCBE2B56009A000FBC97 /* FrenchSpelling.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FrenchSpelling.entitlements; sourceTree = "<group>"; };
 		47B3FCC62B56044A000FBC97 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		47B3FCC82B56142D000FBC97 /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				47B3FCC62B56044A000FBC97 /* QuizView.swift */,
+				47B3FCC82B56142D000FBC97 /* WordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			files = (
 				47B3FCB62B560099000FBC97 /* FrenchSpellingApp.swift in Sources */,
 				47B3FCC72B56044A000FBC97 /* QuizView.swift in Sources */,
+				47B3FCC92B56142D000FBC97 /* WordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

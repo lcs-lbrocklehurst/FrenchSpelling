@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct QuizView: View {
+    @State var currentWord = vocabularyList.randomElement()!
     
     @State var answerGiven = ""
     
@@ -17,7 +18,7 @@ struct QuizView: View {
             VStack {
                 HStack {
                     Spacer()
-                    Text("Banana")
+                    Text("\(currentWord.english)")
                         .font(.custom( "Helvetica", size: 96.0))
                 }
                 
