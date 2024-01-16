@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		47B3FCB62B560099000FBC97 /* FrenchSpellingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B3FCB52B560099000FBC97 /* FrenchSpellingApp.swift */; };
-		47B3FCB82B560099000FBC97 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B3FCB72B560099000FBC97 /* ContentView.swift */; };
 		47B3FCBA2B56009A000FBC97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B3FCB92B56009A000FBC97 /* Assets.xcassets */; };
 		47B3FCBD2B56009A000FBC97 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B3FCBC2B56009A000FBC97 /* Preview Assets.xcassets */; };
+		47B3FCC72B56044A000FBC97 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B3FCC62B56044A000FBC97 /* QuizView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		47B3FCB22B560099000FBC97 /* FrenchSpelling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrenchSpelling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B3FCB52B560099000FBC97 /* FrenchSpellingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenchSpellingApp.swift; sourceTree = "<group>"; };
-		47B3FCB72B560099000FBC97 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		47B3FCB92B56009A000FBC97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47B3FCBC2B56009A000FBC97 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		47B3FCBE2B56009A000FBC97 /* FrenchSpelling.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FrenchSpelling.entitlements; sourceTree = "<group>"; };
+		47B3FCC62B56044A000FBC97 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +36,7 @@
 		47B3FCA92B560099000FBC97 = {
 			isa = PBXGroup;
 			children = (
+				47B3FCB52B560099000FBC97 /* FrenchSpellingApp.swift */,
 				47B3FCB42B560099000FBC97 /* FrenchSpelling */,
 				47B3FCB32B560099000FBC97 /* Products */,
 			);
@@ -52,8 +53,8 @@
 		47B3FCB42B560099000FBC97 /* FrenchSpelling */ = {
 			isa = PBXGroup;
 			children = (
-				47B3FCB52B560099000FBC97 /* FrenchSpellingApp.swift */,
-				47B3FCB72B560099000FBC97 /* ContentView.swift */,
+				47B3FCC52B5603FE000FBC97 /* Model */,
+				47B3FCC42B5603F6000FBC97 /* Views */,
 				47B3FCB92B56009A000FBC97 /* Assets.xcassets */,
 				47B3FCBE2B56009A000FBC97 /* FrenchSpelling.entitlements */,
 				47B3FCBB2B56009A000FBC97 /* Preview Content */,
@@ -67,6 +68,21 @@
 				47B3FCBC2B56009A000FBC97 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		47B3FCC42B5603F6000FBC97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47B3FCC62B56044A000FBC97 /* QuizView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		47B3FCC52B5603FE000FBC97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47B3FCB82B560099000FBC97 /* ContentView.swift in Sources */,
 				47B3FCB62B560099000FBC97 /* FrenchSpellingApp.swift in Sources */,
+				47B3FCC72B56044A000FBC97 /* QuizView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +291,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FrenchSpelling/Preview Content\"";
-				DEVELOPMENT_TEAM = 69F73CZKCZ;
+				DEVELOPMENT_TEAM = B3NSGRQYHM;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -302,7 +318,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FrenchSpelling/Preview Content\"";
-				DEVELOPMENT_TEAM = 69F73CZKCZ;
+				DEVELOPMENT_TEAM = B3NSGRQYHM;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
